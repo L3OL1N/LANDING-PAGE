@@ -2,22 +2,42 @@ $bg-dark:#1f2937;
 $color-hero:#f9faf8;
 $color-button:#3882f6;
 $bg-quote:#e5e7eb;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 // css reset
+body{
+    width: 90%;
+    margin: 0 auto;
+    font-family: roboto;
+}
 ul{
     list-style: none;
 }
 a{
     text-decoration: none;
 }
+button{
+    padding: 10px 20px;
+    background: $color-button;
+    color: $color-hero;
+    border-radius: 5px;
+}
 // css
 header{
     background: $bg-dark;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: $color-hero;
+    align-items: center;
+    img{
+        height: 50px;
+        width: 200px;
+        object-fit: contain;
+    }
     ul{
         display: flex;
         gap: 10px;
+        padding: 10px;
+        margin-right: 50px;
         a{
             color: $color-hero;
         }
@@ -28,13 +48,29 @@ header{
     display: flex;
     color: $color-hero;
     padding: 50px;
+    gap:20px;
+    .text{
+        flex:0.8;
+        h1{
+            font-weight: 900;
+            font-size: 48px;
+        }
+    }
     img{
+        display: block;
         width: 400px;
         height: 200px;
+        object-fit: fill;
         background: $bg-quote;
+        margin: 0 auto;
+    }
+    button{       
+        border: none;
+        outline: $color-button;
     }
 }
 main{
+    margin: 30px 0;
     text-align: center;
     h2{
         font-style: extra-bold;
@@ -42,12 +78,18 @@ main{
     ul{
         display: flex;
         justify-content: center;
-        figure{
-            img{
-                width: 100px;
-                height: 100px;
-                border: 1px solid $color-button;
-                border-radius: 5px;
+        li{
+            width: 250px;
+            figure{
+                img{
+                    width: 100%;
+                    height: 150px;
+                    border: 2px solid $color-button;
+                    border-radius: 5px;
+                }
+                figcaption{
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -55,28 +97,38 @@ main{
 nav{
     background: $bg-quote;
     color: $bg-dark;
-    padding: 50px 0;
+    padding: 50px 25%;
     article{
-        width: 50%;
-        font-style: light italic;
+        font-style:italic;
+        font-weight: 100;
         font-size: 36px;
         margin: 0 auto;
     }
     p{
-        font-style: extra-bold;
+        font-weight: 900;
         text-align: right;
     }
 }
 form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: $color-button;
     color: $color-hero;
     margin: 50px;
-    padding: 20px;
+    padding: 30px 100px;
+    border-radius: 5px;
+    button{
+        width: 150px;
+        height: 2em;
+        padding: 5px 10px;
+        border: 2px solid $color-hero;
+    }
 
 }
 footer{
     background: $bg-dark;
     color: $color-hero;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
